@@ -5,153 +5,262 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adarsh Kumar | Backend Developer</title>
   <style>
+    :root {
+      --primary: #2563eb;
+      --bg: #f8fafc;
+      --text: #222;
+      --muted: #555;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+    }
+
     body {
-      font-family: "Segoe UI", Roboto, sans-serif;
+      font-family: "Inter", "Segoe UI", sans-serif;
+      background: var(--bg);
       margin: 0;
-      background: #f8fafc;
-      color: #222;
+      color: var(--text);
       line-height: 1.6;
     }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-    h1, h2 {
-      color: #1e3a8a;
-    }
-    h1 {
+
+    header {
       text-align: center;
-      font-size: 2.6rem;
+      padding: 80px 20px 50px;
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: #fff;
+    }
+
+    header h1 {
+      font-size: 3rem;
       margin-bottom: 0.3em;
     }
-    h2 {
-      margin-top: 1.8em;
-      border-bottom: 2px solid #2563eb;
-      display: inline-block;
-      padding-bottom: 5px;
+
+    header p {
+      font-size: 1.2rem;
+      color: #dbeafe;
     }
-    .tagline {
-      text-align: center;
-      color: #555;
-      margin-bottom: 20px;
-      font-size: 1.1rem;
-    }
+
     .links {
-      text-align: center;
-      margin-bottom: 30px;
+      margin-top: 20px;
     }
+
     .links a {
-      color: #2563eb;
+      display: inline-block;
+      margin: 5px 10px;
+      padding: 10px 18px;
+      border: 1px solid #fff;
+      border-radius: 25px;
+      color: #fff;
       text-decoration: none;
-      margin: 0 10px;
       font-weight: 500;
+      transition: background 0.3s, color 0.3s;
     }
-    .section p, li {
-      color: #333;
+
+    .links a:hover {
+      background: #fff;
+      color: #1e3a8a;
     }
-    ul {
-      margin-left: 20px;
+
+    section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
     }
-    .project a {
-      color: #2563eb;
-      text-decoration: none;
+
+    h2 {
+      text-align: center;
+      color: var(--primary);
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .about {
+      text-align: center;
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .skills ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0;
+    }
+
+    .skills li {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin: 8px;
+      padding: 10px 15px;
+      font-size: 0.95rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .project-card h3 {
+      color: var(--primary);
+      margin-top: 0;
+    }
+
+    .project-card p {
+      color: var(--muted);
+    }
+
+    .project-card a {
+      color: var(--primary);
       font-weight: 600;
+      text-decoration: none;
     }
+
+    .experience, .education, .certifications, .contact {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 25px;
+      margin: 20px 0;
+    }
+
+    .experience h3, .education h3 {
+      margin-top: 0;
+      color: var(--primary);
+    }
+
     footer {
       text-align: center;
-      margin-top: 60px;
-      padding: 20px;
       background: #e2e8f0;
       color: #555;
+      padding: 20px;
+      margin-top: 60px;
       font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
+  <header>
     <h1>Adarsh Kumar</h1>
-    <p class="tagline">Backend Developer | Automation & System Design Enthusiast</p>
+    <p>Backend Developer • Automation & System Design Enthusiast</p>
     <div class="links">
-      <a href="mailto:adarshkr357@gmail.com">Email</a> |
-      <a href="https://linkedin.com/in/adarshkr357" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/adarshkr357" target="_blank">GitHub</a> |
+      <a href="mailto:adarshkr357@gmail.com">Contact</a>
+      <a href="https://linkedin.com/in/adarshkr357" target="_blank">LinkedIn</a>
+      <a href="https://github.com/adarshkr357" target="_blank">GitHub</a>
       <a href="https://drive.google.com/file/d/1b6kDe96Ux1TXcbYDxkoBzjuRSPmwZIsa/view?usp=drive_link" target="_blank">Resume</a>
     </div>
+  </header>
 
-    <div class="section">
-      <h2>About Me</h2>
+  <section>
+    <h2>About Me</h2>
+    <p class="about">
+      I’m a Computer Science student and freelance software developer passionate about backend engineering and scalable architectures.
+      With 3+ years of hands-on experience, I’ve built automation systems, e-commerce platforms, and distributed backend services.
+      My goal is to create high-performance, fault-tolerant solutions that make systems faster, smarter, and more reliable.
+    </p>
+  </section>
+
+  <section class="skills">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li>Node.js</li><li>FastAPI</li><li>Express.js</li><li>Flask</li>
+      <li>PostgreSQL</li><li>MongoDB</li><li>Redis</li><li>Docker</li>
+      <li>Next.js</li><li>React.js</li><li>TypeScript</li><li>Linux</li>
+      <li>Git</li><li>Nginx</li><li>Heroku</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Hospital Management System</h3>
+        <p>Full-stack healthcare platform using <strong>Next.js</strong>, <strong>FastAPI</strong>, and <strong>PostgreSQL</strong>, containerized with Docker for seamless scalability.</p>
+        <a href="https://github.com/adarshkr357/hospital-management-system" target="_blank">View Project →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Fitness Routine App</h3>
+        <p>Mobile app built with <strong>React Native</strong> providing personalized workout and meal plans with integrated social engagement features.</p>
+        <a href="https://github.com/adarshkr357/Fitness-Routine-App" target="_blank">View Project →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Recipes API</h3>
+        <p>RESTful API built using <strong>PHP</strong> and <strong>PostgreSQL</strong> with JWT authentication and data seeding from TheMealDB API.</p>
+        <a href="https://github.com/adarshkr357/recipes-api" target="_blank">View Project →</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="experience">
+      <h3>Freelance Software Developer (2021 – Present)</h3>
       <p>
-        Proactive third-year Computer Science student with over 3 years of freelance experience in backend development and system design.
-        Skilled at architecting and deploying scalable solutions for automation, e-commerce, and distributed systems. 
-        Adept at backend architecture, performance optimization, and modern deployment pipelines.
+        Built and deployed scalable automation systems and high-traffic e-commerce platforms for clients across various domains. 
+        Leveraged Redis, serverless functions, and microservice patterns to improve performance and scalability.
       </p>
     </div>
+  </section>
 
-    <div class="section">
-      <h2>Technical Skills</h2>
-      <ul>
-        <li><strong>Languages:</strong> PHP, Python, JavaScript, TypeScript</li>
-        <li><strong>Backend:</strong> Node.js, Express.js, FastAPI, Flask</li>
-        <li><strong>Frontend:</strong> Next.js, React.js, React Native</li>
-        <li><strong>Databases:</strong> PostgreSQL, MongoDB, MySQL, Redis</li>
-        <li><strong>DevOps:</strong> Docker, Git, Nginx, Linux/VPS, Heroku</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Experience</h2>
-      <h3>Freelance Software Developer | Self-Employed (June 2021 – Present)</h3>
-      <ul>
-        <li>Engineered web scraping systems (Node.js, Puppeteer, Redis) with 95% success in bypassing anti-bot protections.</li>
-        <li>Developed high-traffic e-commerce platforms (MERN Stack, Redis, Serverless) for ticket booking and retail sales.</li>
-        <li>Designed distributed systems with serverless scalability handling 1M+ users/hour.</li>
-        <li>Improved payment reliability by 92% through iframe isolation and secure gateway integrations.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Projects</h2>
-      <div class="project">
-        <p><a href="https://github.com/adarshkr357/hospital-management-system" target="_blank">Hospital Management System</a> — Full-stack healthcare app (Next.js, FastAPI, PostgreSQL, Docker) managing admissions, billing, and patient data.</p>
-      </div>
-      <div class="project">
-        <p><a href="https://github.com/adarshkr357/Fitness-Routine-App" target="_blank">Fitness Routine App</a> — React Native app for personalized workouts, meal plans, and reward-based fitness engagement.</p>
-      </div>
-      <div class="project">
-        <p><a href="https://github.com/adarshkr357/recipes-api" target="_blank">Recipes API</a> — RESTful API (PHP, PostgreSQL, JWT, Docker) with CRUD, authentication, and data seeding from TheMealDB.</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>Certifications</h2>
+  <section>
+    <h2>Certifications</h2>
+    <div class="certifications">
       <ul>
         <li>Generative AI — Wingspan (Mar 2025)</li>
         <li>Data Structures and Algorithms — Wingspan (Apr 2024)</li>
         <li>Python Programming (Python 3) — Wingspan (Mar 2024)</li>
       </ul>
     </div>
+  </section>
 
-    <div class="section">
-      <h2>Education</h2>
-      <p><strong>B.Tech. in Computer Science and Engineering</strong><br>
-        Dronacharya College of Engineering, Gurugram (2023 – 2027)<br>
-        <em>CGPA: 7.4 / 10.0 (up to 4th semester)</em>
-      </p>
+  <section>
+    <h2>Education</h2>
+    <div class="education">
+      <h3>B.Tech. in Computer Science and Engineering</h3>
+      <p>Dronacharya College of Engineering, Gurugram (2023 – 2027)</p>
+      <p><em>CGPA: 7.4 / 10.0 (up to 4th semester)</em></p>
     </div>
+  </section>
 
-    <div class="section">
-      <h2>Contact</h2>
-      <p>📍 New Delhi, India<br>
-         📧 <a href="mailto:adarshkr357@gmail.com">adarshkr357@gmail.com</a><br>
-         📞 +91 6299563975
-      </p>
+  <section>
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>📍 New Delhi, India</p>
+      <p>📧 <a href="mailto:adarshkr357@gmail.com">adarshkr357@gmail.com</a></p>
+      <p>📞 +91 6299563975</p>
     </div>
+  </section>
 
-    <footer>
-      © 2025 Adarsh Kumar | Built with ❤️ using HTML & CSS
-    </footer>
-  </div>
+  <footer>
+    © 2025 Adarsh Kumar — Designed & Built by Me 🚀
+  </footer>
 </body>
 </html>
